@@ -7,16 +7,8 @@
 
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
-<apex:includeLightning />
-<div id="lightning"/>
+<div data-lightning-out="true"></div>
 </body>
-    <script>
-    $Lightning.use("c:LightningOutHelloWorldApp", function(){
-        $Lightning.createComponent("c:helloWorldLWC",{},"lightning",
-                                      function(cmp){
-                                        console.log("Component was created");
-                                      }
-                                   );
-    });
+    <script src="https://targeteverest54-dev-ed.develop.my.site.com/Demo/lightning.out.js">
     </script>
 </html>
