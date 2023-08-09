@@ -7,6 +7,7 @@
     </script>
 </head>
 <body>
+<div comp1></div>
 <div data-lightning-out="true"></div>
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
@@ -29,6 +30,20 @@
               $Lightning.createComponent(
                       componentName,
                       componentAttributes,
+                      comp1,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      "c:insertAccount",
+                      componentAttributes,
                       targetElement,
                       function (cmp){
                         console.log('lightning component created');
@@ -37,7 +52,6 @@
             },
             lightningEndpoint
     );
-
 
   </script>
 </html>
