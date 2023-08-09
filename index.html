@@ -7,7 +7,7 @@
     </script>
 </head>
 <body>
-<div comp1></div>
+<div id="comp1></div>
 <div data-lightning-out="true"></div>
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
@@ -30,7 +30,7 @@
               $Lightning.createComponent(
                       componentName,
                       componentAttributes,
-                      comp1,
+                      targetElement,
                       function (cmp){
                         console.log('lightning component created');
                       }
@@ -44,7 +44,7 @@
               $Lightning.createComponent(
                       "c:insertAccount",
                       componentAttributes,
-                      targetElement,
+                      "comp1",
                       function (cmp){
                         console.log('lightning component created');
                       }
